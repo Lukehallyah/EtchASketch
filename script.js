@@ -21,8 +21,9 @@ resizer.addEventListener("click",() => {
         container.innerHTML='';
         
         
-        let userNum = parseInt(prompt("Enter Your Number Here"));
-        
+        let userNum = parseInt(prompt("Enter Your Number Here(max: 100)"));
+        if(userNum>100){userNum=100};
+        if(userNum<1){userNum=1};
         
 
         for(let i=1; i<=userNum*userNum; i++){
