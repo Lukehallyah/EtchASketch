@@ -23,7 +23,6 @@ resizer.addEventListener("click",() => {
         
         let userNum = parseInt(prompt("Enter Your Number Here"));
         
-        const boxPerSide= Math.floor(500/userNum);
         
 
         for(let i=1; i<=userNum*userNum; i++){
@@ -46,10 +45,10 @@ resizer.addEventListener("click",() => {
                         this.style.backgroundColor="black";
                  });
 
-                 element.addEventListener('mouseleave', function(){
-                        this.style.backgroundColor="black";
+                 
+                 element.addEventListener('mousedown', function(){
+                        this.style.backgroundColor='white';
                  })
-
                 
 });
 
