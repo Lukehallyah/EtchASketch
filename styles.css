@@ -17,3 +17,20 @@ main{
     height: 5vh;
     width: 10vw;
 }
+
+
+.container{
+    width: 75vw;
+    height: 75vw;
+   /*INCREDIBLE!! notice the height is vw too?! it makes this a perfect square*/
+    max-width: 500px;
+    max-height: 500px;
+}
+
+@media(max-width:350px){
+
+    .container{
+        width:90vw;
+        height:90vw;
+    }
+}

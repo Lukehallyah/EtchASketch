@@ -9,8 +9,7 @@ if(container){
     container.style.justifyContent="center";
     container.style.alignItems="center";
     container.style.flexWrap="wrap";
-    container.style.width='500px';
-    container.style.height="500px";
+    
     container.style.boxSizing='border-box';
 
 }
