@@ -9,39 +9,64 @@ if(container){
     container.style.justifyContent="center";
     container.style.alignItems="center";
     container.style.flexWrap="wrap";
-    container.style.width='50vw'
-    container.style.height="75vh";
+    container.style.width='500px';
+    container.style.height="500px";
+    container.style.boxSizing='border-box';
 
 }
 
+const resizer=document.querySelector(".resizer");
 
-for(let i=0; i<=15; i++){
-    const div= document.createElement("div");
-    div.style.width="25%";
-    div.style.height="25%";
-    div.style.display="flex";
-    div.style.justifyContent="center";
-    div.style.alignItems="center";
-    div.classList.add('grid');
-    container.appendChild(div);
-}
+resizer.addEventListener("click",() => {
+        container.innerHTML='';
+        
+        
+        let userNum = parseInt(prompt("Enter Your Number Here"));
+        
+        const boxPerSide= Math.floor(500/userNum);
+        
 
-const grid = document.querySelectorAll(".grid").forEach(element => {
-    element.addEventListener("mouseenter",function(){
-            this.style.backgroundColor="yellow";
-    });
+        for(let i=1; i<=userNum*userNum; i++){
+                 const div= document.createElement("div");
+                 div.style.width=`calc(100%/${userNum})`;
+                 div.style.height=`calc(100%/${userNum})`;
+                div.style.display="flex";
+                div.style.justifyContent="center";
+                div.style.alignItems="center";
+                div.classList.add('grid');
+                container.appendChild(div);
+};
 
-    element.addEventListener('mouseleave', function(){
-            this.style.backgroundColor="blue";
-    })
 
-    element.addEventListener("mousedown", function(){
-            this.style.backgroundColor="lightblue";
-    })
-    element.addEventListener("mouseup", function(){
-            this.style.backgroundColor="cyan";
-    })
-});;
+        
+        document.querySelectorAll(".grid").forEach(element => {
+
+
+                 element.addEventListener("mouseenter",function(){
+                        this.style.backgroundColor="black";
+                 });
+
+                 element.addEventListener('mouseleave', function(){
+                        this.style.backgroundColor="black";
+                 })
+
+                
+});
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
 
 //Why this works
         //document.querySelectorAll selects all with the class "grid"
@@ -54,11 +79,6 @@ const grid = document.querySelectorAll(".grid").forEach(element => {
 
 
 
-const resizer=document.querySelector(".resizer");
-
-if(resizer){
-        
-}
 
 
 
